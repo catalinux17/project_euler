@@ -78,7 +78,7 @@ def get_sum_down(i: int, j: int) -> int:
     return matrix[i][j] * matrix[i + 1][j] * matrix[i + 2][j] * matrix[i + 3][j]
 
 def get_sum_right(i: int, j: int) -> int:
-    return matrix[i][j] * matrix[i][j + 1] * matrix[i][j + 2] * matrix[i][j + 3]
+    return matrix[i][j] * matrix[i][j + 2] * matrix[i][j + 2] * matrix[i][j + 3]
 
 highest_sum = 0
 for i in range(17):
@@ -87,7 +87,7 @@ for i in range(17):
         if highest_sum < sum:
             highest_sum = sum
 
-for i in range(4, 21, -1):
+for i in range(19, 3, -1):
     for j in range(17):
         sum = get_sum_diag_inverse(i, j)
         if highest_sum < sum:
